@@ -12,7 +12,7 @@ public class DeliverResource {
 
     @Autowired
     private DeliverService deliverService;
-    
+
     @PutMapping(value = "/{id}")
     public ResponseEntity<Void> saveRevision(@PathVariable Long id, @RequestBody DeliverRevisionDTO dto) {
         deliverService.saveRevision(id, dto);
